@@ -57,10 +57,11 @@ for d in dirs:
           # convert all pdf files to plaintext
           txt_name = "%s/%s.txt" % (x[0], f[:-4])
           #print("pdf2txt %s/%s > %s" % (x[0], f, txt_name))
-          os.system("pdf2txt %s/%s > %s" % (x[0], f, txt_name))
+          os.system("pdftotext %s/%s %s" % (x[0], f, txt_name))
+          #os.system("dumppdf -a %s/%s > %s" % (x[0], f, txt_name))
 
           if os.path.exists(txt_name):
-            if file_len(txt_name)>0:
+            if os.path.getsize(txt_name)>0:
               print "%s.pdf,%s,%s" % (txt_name[6:-4], (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0), get_size_ratio("%s/%s" % (x[0], f), txt_name))
           #print (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0)
 
