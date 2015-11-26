@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # read through the folders and catagorise the data fiels
+journal_name = 'PeerJ'
 path_to_journal_data = '/Users/sbalan/Desktop/peerj/'
 
 dirs_with_papers = os.listdir(path_to_journal_data)
@@ -67,6 +68,7 @@ for dir_name in dirs_with_papers:
 #    dict_writer.writerows(list_of_metrics)
 
 
-list_of_metrics_df.to_csv("peerj_pandas.csv", header=True)
+list_of_metrics_df.to_csv("stats_of_supp_data/"+journal_name+".csv", header=True)
 
 #list_of_metrics_df[0:5].transpose().plot()
+#plt.show()
