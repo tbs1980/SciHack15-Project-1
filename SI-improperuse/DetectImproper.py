@@ -1,5 +1,9 @@
-# PeerJ citation parsing code.
-# Level: 1 (functioning, undocumented, inflexible, nonportable, unsustainable)
+"""
+DetectImproper.py
+
+Detects improper use of SI file formats, and scores them.
+
+"""
 
 import os
 import sys
@@ -24,6 +28,8 @@ def get_num_short_sentences(fname):
         j += 1
   return j
 
+def get_size_ratio(docx_file, txt_file):
+  return (os.path.getsize(docx_file)*1.0) / (os.path.getsize(txt_file)*1.0)
 
 dirs = walk_dir(sys.argv[1])
 for d in dirs:
@@ -36,6 +42,6 @@ for d in dirs:
 
         txt_name = "%s/%s.txt" % (x[0], f[:-5])
         if os.path.exists(txt_name):
-          print "%s.docx,%s" % (txt_name[6:-4], (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0))
+          print "%s.docx,%s,%s" % (txt_name[6:-4], (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0), get_size_ratio("%s/%s" % (x[0], f), txt_name))
           #print (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0)
 
