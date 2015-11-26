@@ -15,13 +15,15 @@ def file_len(fname):
       pass
   return i + 1
 
-def get_num_one_word_sentences(fname):
+def get_num_short_sentences(fname):
   j = 0
   with open(fname) as f:
     for i, l in enumerate(f):
-      if len((l.strip()).split()) == 1:
+      l = len((l.strip()).split()) 
+      if l>0 and l<3:
         j += 1
   return j
+
 
 dirs = walk_dir(sys.argv[1])
 for d in dirs:
@@ -30,15 +32,10 @@ for d in dirs:
     for f in x[2]:    
       if f.endswith(".docx"):
         # convert all docx files to plaintext
-        #os.system("~/Software/docx2txt/docx2txt.sh %s/%s" % (d, f))
-        #print("~/Software/docx2txt/docx2txt %s/%s" % (d, f))
-        txt_name = "%s/%s.txt" % (x[0], re.escape(f[:-5]))
-        txt_name = txt_name.replace("\_","_")
-        txt_name = txt_name.replace("\.",".")
-        txt_name = txt_name.replace("\-","-")
-        #txt_name = r"%s" % (txt_name)
-        #if "&" not in txt_name:
-        print txt_name
-        print file_len(txt_name), get_num_one_word_sentences(txt_name)
+        # os.system("~/Software/docx2txt/docx2txt.sh %s/%s" % (d, f))
 
+        txt_name = "%s/%s.txt" % (x[0], f[:-5])
+        if os.path.exists(txt_name):
+          print "%s.docx,%s" % (txt_name[6:-4], (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0))
+          #print (get_num_short_sentences(txt_name)*1.0) / (file_len(txt_name)*1.0)
 
