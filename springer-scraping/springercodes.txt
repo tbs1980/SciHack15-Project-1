@@ -1,0 +1,62 @@
+11357,AGE
+40003,Agricultural Research
+10495,Apoptosis
+13204,Applied Nanoscience
+10522,Biogerontology
+40659,Biological Research
+10525,Biology Bulletin
+40898,Biomanufacturing Reviews
+10565,Cell Biology and Toxicology
+12192,Cell Stress and Chaperones
+13225,Fungal Diversity
+13311,Neurotherapeutics
+439,Human Genetics
+412,Chromosoma
+11103,Plant Molecular Biology
+13593,Agronomy for Sustainable Development
+10021,Ecosystems
+12284,Rice
+11306,Metabolomics
+12711,Genetics Selection Evolution
+122,Theoretical and Applied Genetics
+441,Cell and Tissue Research
+12155,BioEnergy Research
+12640,Neurotoxicity Research
+11120,Photosynthesis Research
+10980,Landscape Ecology
+10533,Biogeochemistry
+394,European Journal of Nutrition
+572,Mycorrhiza
+374,Biology and Fertility of Soils
+253,Applied Microbiology and Biotechnology
+338,Coral Reefs
+726,Amino Acids
+10522,Biogerontology
+223,Calcified Tissue International
+10126,Marine Biotechnology
+425,Planta
+13238,Protein & Cell
+10237,Biomechanics and Modeling in Mechanobiology
+10858,Journal of Biomolecular NMR
+442,Oecologia
+299,Plant Cell Reports
+335,Mammalian Genome
+248,Microbial Ecology
+11104,Plant and Soil
+12263,Genes & Nutrition
+12015,Stem Cell Reviews and Reports
+10886,Journal of Chemical Ecology
+438,Molecular Genetics and Genomics
+11160,Reviews in Fish Biology and Fisheries
+11042,Multimedia Tools and Applications
+521,Neural Computing and Applications
+10618,Data Mining and Knowledge Discovery
+779,Personal and Ubiquitous Computing
+453,Algorithmica
+371,The Visual Computer
+11075,Numerical Algorithms
+11227,The Journal of Supercomputing
+138,Machine Vision and Applications
+10115,Knowledge and Information Systems
+607,Computing
+10462,Artificial Intelligence Review
